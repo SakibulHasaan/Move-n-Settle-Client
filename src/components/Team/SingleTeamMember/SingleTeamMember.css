@@ -1,0 +1,39 @@
+.team-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition : 0.5s;
+
+}
+
+.team-col h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.team-col p{
+    color: #777;
+    font-size: 14px;
+    font-weight:300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.team-col:hover{
+    box-shadow: 0 0.5px 0 0 #ffffff inset, 0 1px 2px 0 #B3B3B3;
+    cursor: pointer;
+}
+
+
+@media (max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+    .team-col h1{
+        font-size: 20px;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,41 @@
+.workProcess{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.workProcess h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.workProcess p{
+    color: #777;
+    font-size: 14px;
+    font-weight:300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.workProcess img{
+    width: 40%;
+}
+
+.row{
+    margin-top:5%;
+    display: flex;
+    justify-content:space-between;
+}
+
+@media (max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+    .workProcess h1{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+}
+

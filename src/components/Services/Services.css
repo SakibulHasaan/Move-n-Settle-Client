@@ -1,0 +1,47 @@
+.service{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.service h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.service p{
+    color: #777;
+    font-size: 14px;
+    font-weight:300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top:5%;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: nowrap;
+}
+
+.row a{
+    text-decoration: none;
+    color: inherit;
+    outline: 0;
+    cursor: auto;
+    margin: 20px;
+}
+
+
+
+@media (max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+    .service h1{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+}
