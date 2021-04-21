@@ -2,16 +2,18 @@ import { createContext, useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import './App.css';
+import AddAdmin from './components/AddAdmin/AddAdmin';
+import AddReview from './components/AddReview/AddReview';
 import AddService from './components/AddService/AddService';
 import AdminDashboard from './components/AdminDashboard/AdminDashboard';
-import CheckOutService from './components/CheckOutService/CheckOutService';
-import Header from './components/Header/Header';
+import AllOrders from './components/AllOrders/AllOrders';
+import CheckOutService from './components/CheckOutService/CheckOutService/CheckOutService';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
+import ManageService from './components/ManageService/ManageService';
 import NavBar from './components/NavBar/NavBar';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 export const UserContext = createContext();
@@ -19,29 +21,32 @@ export const UserContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
   return (
-      <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-        <div className="App">
-         
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <div>
+
         <Router>
-          
+
           <NavBar></NavBar>
 
           <Switch>
-
             <Route exact path="/">
               <Home />
             </Route>
 
-            <Route path="/adminDashboard">
+            <PrivateRoute path="/dashboard">
               <AdminDashboard />
-            </Route>
+            </PrivateRoute>
 
-            {/* <PrivateRoute path="/orders">
-              <Orders></Orders>
-            </PrivateRoute> */}
+            <PrivateRoute path="/addReview">
+              <AddReview />
+            </PrivateRoute>
 
             <PrivateRoute path="/addService">
-                <AddService/>
+              <AddService />
+            </PrivateRoute>
+
+            <PrivateRoute path="/manageService">
+              <ManageService />
             </PrivateRoute>
 
             <Route path="/login">
@@ -51,13 +56,22 @@ function App() {
             <PrivateRoute path="/checkout/:id">
               <CheckOutService></CheckOutService>
             </PrivateRoute>
-            
+
+            <PrivateRoute path="/addAdmin">
+              <AddAdmin />
+            </PrivateRoute>
+
+            <PrivateRoute path="/allOrders">
+              <AllOrders />
+            </PrivateRoute>
+
+
           </Switch>
         </Router>
 
 
-        </div>
-      </UserContext.Provider>
+      </div>
+    </UserContext.Provider>
 
   )
 }

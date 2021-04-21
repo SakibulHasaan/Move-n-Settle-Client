@@ -25,8 +25,10 @@ const Login = () => {
         firebase.auth()
             .signInWithPopup(provider)
             .then((result) => {
-                const { displayName, email } = result.user;
-                const signedInUser = { UserName: displayName, email: email }
+
+                console.log(result.user.photoURL);
+                const { displayName, email, photoURL } = result.user;
+                const signedInUser = { UserName: displayName, email: email, userImage: photoURL };
                 setLoggedInUser(signedInUser);
                 sessionStorage.setItem('token', signedInUser.email);
                 history.replace(from);
@@ -45,9 +47,9 @@ const Login = () => {
     }
 
     return (
-        <div style={{textAlign: 'center'}}>
+        <div style={{textAlign: 'center', marginTop: '200px'}} >
            {
-                loggedInUser.UserName ?
+                loggedInUser.email ?
                 <button onClick={handleLogOut} className="btn btn-primary">Logout</button> :
                 <button onClick={handleGoogleSignInClick} className="btn btn-primary">Login with Google</button>
            }

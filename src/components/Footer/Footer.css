@@ -15,7 +15,7 @@
     flex-flow: row wrap;
     padding: 50px;
     color: #fff;
-    background-color: darkblue;
+    background-color: grey;
     }
     
     .footer > * {
@@ -56,7 +56,7 @@
     }
     
     .box a {
-    color: #999;
+    color: #000;
     }
     
     .h-box {
@@ -66,13 +66,13 @@
     
     .b-footer {
     text-align: center;
-    color: #999;
+    color: #000;
     padding-top: 50px;
     }
     
     .l-footer p {
     padding-right: 20%;
-    color: #999;
+    color: #000;
     }  
     .l-footer img{
         width: 50%;

@@ -1,16 +1,16 @@
 import React from 'react';
 import AddService from '../AddService/AddService';
-import SideBar from './SideBar/SideBar';
+import SideBar from '../SideBar/SideBar';
 
 const AdminDashboard = () => {
     return (
-        <div className="container-fluid row">
+        <div className="row">
             <div className="col-md-4">
                 <SideBar />
             </div>
 
             <div  className="col-md-8">
-                <AddService/>
+                <h1>Welcome to Dashboard</h1>
             </div>
         </div>
     );

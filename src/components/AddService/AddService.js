@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
-
+import SideBar from '../SideBar/SideBar';
 const AddService = () => {
 
     const [manageServiceClicked, setManageServiceClicked] = useState(false);
@@ -27,7 +27,9 @@ const AddService = () => {
     };
 
     return (
-        <div className="p-5 mt-5">
+        <div>
+            <SideBar/>
+            <div className="" style={{marginLeft : "300px"}}>
             {
                 <div className="w-50">
                     <h1 style={{ color: 'navy' }}>Add a Service to database</h1>
@@ -39,6 +41,7 @@ const AddService = () => {
                     </form>
                 </div>
             }
+        </div>
         </div>
     );
 };

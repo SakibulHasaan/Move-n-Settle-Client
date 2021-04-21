@@ -3,18 +3,19 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
 import './SingleReview.css'
 const SingleReview = (props) => {
-    const {image, name, speech} = props.review;
+    const {name, description} = props.review;
     return (
-        <div className="review-col">
-            <img src={image} alt=""/>
+        <div className="review-col col-md-5 col-sm-12">
             <div>
                 <h3>{name}</h3>
-                <p>{speech}</p>
+                <p>{description}</p>
+                <div style={{ marginLeft: "10px"}}>
                 <FontAwesomeIcon icon={faStar}/>
                 <FontAwesomeIcon icon={faStar}/>
                 <FontAwesomeIcon icon={faStar}/>
                 <FontAwesomeIcon icon={faStar}/>
                 <FontAwesomeIcon icon={faStar}/>
+                </div>
             </div>
         </div>
     );

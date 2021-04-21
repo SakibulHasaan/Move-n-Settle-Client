@@ -20,7 +20,7 @@
 }
 
 @media (max-width: 700px) {
-  .row {
+  .work-row {
     flex-direction: column;
   }
   .work-col h1 {

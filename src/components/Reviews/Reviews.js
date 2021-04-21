@@ -20,6 +20,7 @@ const reviewData = [
 
 const Reviews = () => {
     const [reviews, setReviews] = useState();
+
     useEffect(() =>{
         fetch('http://localhost:4000/allReviews')
         .then(res => res.json())
@@ -27,13 +28,13 @@ const Reviews = () => {
     },[]);
 
     return (
-        <div className="reviews">
+        <div className="reviews container">
             <h1>What Our Customer's Says About As</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, minus.</p>
 
-            <div className="row">
+            <div className="row justify-content-around">
                     {
-                        reviewData && reviewData.map(review => <SingleReview review={review}></SingleReview>)
+                        reviews && reviews.map(review => <SingleReview review={review}></SingleReview>)
                     }
             </div>
             

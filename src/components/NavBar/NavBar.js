@@ -19,6 +19,9 @@ const NavBar = () => {
             setSidebar(!sidebar);
         }, 100)
     }
+    const handleLogOut = () => {
+        setLoggedInUser({});
+    }
 
     return (
         <nav className="nav-bar">
@@ -28,10 +31,10 @@ const NavBar = () => {
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="#services">Services</Link></li>
-                    <li><Link to="#blog">Blog</Link></li>
+                    <li><Link to="/dashboard">Dashboard</Link></li>
                     <li><Link to="#blog">About</Link></li>
                     {
-                        loggedInUser.UserName ? <li><Link to="login" >{loggedInUser.UserName}</Link></li> : <li><Link to="/login">login</Link></li>
+                        loggedInUser.UserName ? <li><button onClick={handleLogOut} style={{border: 'none', background: 'none', color: 'white'}}>Logout</button></li> : <li><Link to="/login">login</Link></li>
                     }
                 </ul>
             </div>

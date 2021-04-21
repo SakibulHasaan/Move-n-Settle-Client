@@ -10,15 +10,8 @@
     font-weight: 600;
 }
 
-.team p{
-    color: #777;
-    font-size: 14px;
-    font-weight:300;
-    line-height: 22px;
-    padding: 10px;
-}
 
-.row{
+.team-row{
     margin-top:5%;
     display: flex;
     justify-content:space-between;
@@ -28,7 +21,7 @@
 
 
 @media (max-width: 700px){
-    .row{
+    .team-row{
         flex-direction: column;
     }
     .team h1{

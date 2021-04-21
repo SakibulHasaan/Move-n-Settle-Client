@@ -1,22 +1,12 @@
 .review-col{
-    flex-basis: 44%;
+    background: #fff3f3;
     border-radius: 10px;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     text-align: left;
     padding: 25px;
     cursor: pointer;
-    display: flex;
 }
 
-.review-col img{
-    height:60px; 
-    width: 60px;
-    object-fit: cover;
-    margin-right: 5px;
-    margin-left: 30px;
-    border-radius:50%;
-    image-resolution:initial;
-}
 
 .review-col p {
     padding: 0;
@@ -26,3 +16,4 @@
 .review-col h3 {
   margin-left: 10px;  
 } 
+

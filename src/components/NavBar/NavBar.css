@@ -68,7 +68,7 @@ nav img {
   .nav-links {
     position: absolute;
     background: transparent;
-    height: 100vh;
+    height: 100px;
     width: -1px;
     visibility: visible;
     right: 0px;

@@ -26,7 +26,7 @@ const Team = () => {
         <div className="team">
             <h1>OUR TEAM</h1>
 
-            <div className="row">
+            <div className="team-row">
                 {teamData.map((data) => <SingleTeamMember  data={data}/>)}
             </div>
 

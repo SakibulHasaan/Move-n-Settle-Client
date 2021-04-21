@@ -31,7 +31,7 @@ const WorkProcess = () => {
         <section className="workProcess">
             <h1>Our Work Process</h1>
             <p>Its this founding principle that has helped our organisation as well as our clients become a defining force in the industry.</p>
-            <div className="row">
+            <div className="work-row">
                 {
                     WorkData.map( (data) => <SingleWork data={data}/>)
                 }
