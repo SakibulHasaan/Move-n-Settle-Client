@@ -9,8 +9,7 @@ const AddAdmin = () => {
         const adminInfo = {
             name: data.name,
             email: data.email
-        }
-
+        };
         fetch('https://infinite-mountain-25271.herokuapp.com/addAdmin', {
             method: 'POST',
             headers: { "content-Type": 'application/json' },
