@@ -11,7 +11,7 @@ const AddAdmin = () => {
             email: data.email
         }
 
-        fetch('http://localhost:4000/addAdmin', {
+        fetch('https://infinite-mountain-25271.herokuapp.com/addAdmin', {
             method: 'POST',
             headers: { "content-Type": 'application/json' },
             body: JSON.stringify(adminInfo)

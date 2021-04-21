@@ -16,7 +16,7 @@ const AllOrders = () => {
         Object.keys(data).forEach(key => {
 
             if (data[key]) {
-                fetch('http://localhost:4000/findOrder/' + key,)
+                fetch('https://infinite-mountain-25271.herokuapp.com/findOrder/' + key,)
                     .then(res => res.json())
                     .then(response => {
 
@@ -29,7 +29,7 @@ const AllOrders = () => {
                             orderStatus: status
                         }
 
-                        fetch('http://localhost:4000/updateOrderStatus/' + key, {
+                        fetch('https://infinite-mountain-25271.herokuapp.com/updateOrderStatus/' + key, {
                             method: 'PATCH',
                             headers: { "content-Type": 'application/json' },
                             body: JSON.stringify(NewOrder)
@@ -47,10 +47,10 @@ const AllOrders = () => {
     };
 
     useEffect(() => {
-        fetch('http://localhost:4000/allOrders')
+        fetch('https://infinite-mountain-25271.herokuapp.com/allOrders')
             .then((res) => res.json())
             .then((data) => {
-                fetch("http://localhost:4000/allAdmins")
+                fetch("https://infinite-mountain-25271.herokuapp.com/allAdmins")
                     .then((res) => res.json())
                     .then((admins) => {
                         const adminData = admins.find(

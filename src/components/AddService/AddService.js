@@ -13,7 +13,7 @@ const AddService = () => {
             description: data.description,
         }
 
-        fetch('http://localhost:4000/addAService', {
+        fetch('https://infinite-mountain-25271.herokuapp.com/addAService', {
             method: 'POST',
             headers: { "content-Type": 'application/json' },
             body: JSON.stringify(serviceInfo)

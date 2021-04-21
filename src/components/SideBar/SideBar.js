@@ -7,7 +7,7 @@ const SideBar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const [isAdmin, setIsAdmin] = useState(false);
     useEffect(() => {
-        fetch("http://localhost:4000/allAdmins")
+        fetch("https://infinite-mountain-25271.herokuapp.com/allAdmins")
                     .then((res) => res.json())
                     .then((admins) => {
                         const adminData = admins.find(

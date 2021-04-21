@@ -9,7 +9,7 @@ const CheckOutService = () => {
     let { id } = useParams();
     const [ServiceData, setServiceData] = useState({})
     useEffect(() => {
-        fetch('http://localhost:4000/find/' + id)
+        fetch('https://infinite-mountain-25271.herokuapp.com/find/' + id)
             .then((response) => response.json())
             .then(data => {
                 // console.log(data);

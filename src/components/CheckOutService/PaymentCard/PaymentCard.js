@@ -37,7 +37,7 @@ const PaymentCard = ({serviceData}) => {
         const just_date = date.toDateString('dd/MM/yyyy');
         const UserOrder = { ...loggedInUser, ...serviceData, date: just_date, paymentID: paymentMethod.id , orderStatus: "Pending"}
 
-        fetch('http://localhost:4000/order', {
+        fetch('https://infinite-mountain-25271.herokuapp.com/order', {
             method: 'POST',
             headers: { "content-Type": 'application/json'},
             body: JSON.stringify(UserOrder)
